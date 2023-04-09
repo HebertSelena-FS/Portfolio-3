@@ -1,52 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+###  Spoti-Search
 
-## Getting Started
+### about 
+ Building a website that uses the API of Spotify. It will be able to make a search 
+ and display the content and also have access to playing the content you searched.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# Prerequisites
+
+- NodeJS => v16
+- NPM => v8
+- MongoDB => v6
+- Chome/Firefox/Safari/Edge => latest 2 major updates
+
+# other Considerations
+
+If you are haveing a problem running a project and ports are being used on another project and you cant not figure out where it is. You can run this command to clear out any activity you have running on the port so that your project can run. 
+
+```
+sudo lsof-nP -i4TCP:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Side note
+You can use this command to help fix that problem with any project. To use this on other projects. For example you are running a server and client port. One at 3000 and 8000. You run into the problem of port 8000 is being used else where. Run the following command 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+sudo lsof-nP -i4TCP:8000
+```
+The only difference is that the port has been changed. You can do this with any port number you need to work on just replace the 3000 or 8000 respectivly with the port you need to clear all activity on.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# Getting Started 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### .ENV
+For the .env file you will need to take the .env.dist file and make that your own .env file on your local project. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can do this with the following command 
 
-## Learn More
+```
+cp .env.dist .env && vim .env
+```
 
-To learn more about Next.js, take a look at the following resources:
+once you have used the command a vim window will appear in your terminal. Place all the enviorment variables required inside the vim window then save it. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Starting the Client 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To Start this project you will need to make sure your terminal is in the correct location to run the following commands to accomplish a local build to test your product or a build.
 
-## Deploy on Vercel
+``` 
+npm run dev
+```
+this command is to run locally 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-----------------
+To build the project run the following command.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run build
+```
+----------------
 
+# Links
 
+All the major links that you will need to navigate this project are listed below. 
 
+- http://localhost:3000 - Landing page
+-http://localhost:3000/login - login page
+- http://localhost:3000/home - home page after signing in
 
-work on readme
-
-build the repo 
-repo-milestones
-repo-issues
-project-import .env
-make/build .env file
-build/make spotify account/project
-build/make database
-connect project to database
+----
+### notes
+This maybe be updated further in the future.
+----
