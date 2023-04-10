@@ -70,3 +70,16 @@ All the major links that you will need to navigate this project are listed below
 ### notes
 This maybe be updated further in the future.
 ----
+
+# Links
+
+All the major links that you will need to navigate this project are listed below. 
+
+- http://localhost:3000 - Landing page
+-http://localhost:3000/login - login page
+- http://localhost:3000/home - home page after signing in
+
+----
+### notes
+This maybe be updated further in the future.
+----
