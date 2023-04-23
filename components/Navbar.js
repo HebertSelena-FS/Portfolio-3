@@ -7,25 +7,22 @@ const { data: session, loading } = useSession()
 // const result = useSession()
 console.log({ session })
   return (
-    <nav className='header'>
-      <h1 className='logo'>
+    <div className='header'>
+      {/* <h1 className='logo'>
         <a href='#'>NextAuth</a>
-      </h1>
-      <ul className={`main-nav ${!session && loading ? 'loading' : 'loaded'}`}>
-        <li>
-          <Link href='/'>
-            Home
-          </Link>
+      </h1> */}
+      <ul className="container-nav">
+        <li className='nav-items' >
+          {session ? <Link href='/'> Home </Link> : ""}
         </li>
-        <li>
-          <Link href='/dashboard'>
-            Dashboard
-          </Link>
+        <li className='nav-items' >
+          {session ? <Link href='/artist'> Artist </Link> : ""}
         </li>
-        <li>
-          <Link href='/blog'>
-            Blog
-          </Link>
+        <li className='nav-items' >
+          {session ? <Link href='/album'> Album </Link> : ""}
+        </li>
+        <li className='nav-items' >
+          {session ? <Link href='/song'> Song </Link> : ""}
         </li>
 
         {!loading && !session && (
@@ -55,7 +52,7 @@ console.log({ session })
           </li>
         )}
       </ul>
-    </nav>
+    </div>
   );
 }
 

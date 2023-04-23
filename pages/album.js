@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useSession } from 'next-auth/react'
 import Navbar from '@/components/Navbar'
+import Search from '@/components/Searchartist'
+import Searchalbum from '@/components/Searchalbum'
 
 export default function Home() {
   const { data: session }= useSession()
@@ -15,12 +17,14 @@ export default function Home() {
       </Head>
 
         <Navbar/>
-        <h1 >
-        {session ?  
-        <div> {session.user.name}, Home page
-        </div>  
-        : ''}
-        </h1>
+        <main > 
+          <div className='artist-body' >
+             Lets search some Album
+            
+          </div> 
+          
+          <Searchalbum/>
+        </main>
         
     </div>
   )

@@ -1,11 +1,21 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { useSession } from 'next-auth/react'
 import Navbar from '@/components/Navbar'
+import { useEffect, useState } from 'react'
+import Searchartist from '@/components/Searchartist'
 
-export default function Home() {
+export default function artist() {
   const { data: session }= useSession()
   console.log({ session })
+  const [query, setQuery] = useState('')
+  const [tracks, setTracks] = useState([])
+  const [data, setdata] = useState()
+
+ 
+
+
+
+
   return (
     <div className="body">
       <Head>
@@ -15,12 +25,14 @@ export default function Home() {
       </Head>
 
         <Navbar/>
-        <h1 >
-        {session ?  
-        <div> {session.user.name}, Home page
-        </div>  
-        : ''}
-        </h1>
+        <main > 
+          <div className='artist-body' >
+             Lets search some Artist
+            
+          </div> 
+          
+          <Searchartist/>
+        </main>
         
     </div>
   )
