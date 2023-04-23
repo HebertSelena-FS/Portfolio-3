@@ -6,6 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -22,4 +24,38 @@ a {
 .logo{
   width: 50px;
   height: 50px;
+}
+
+.artist-body{
+  font-size: 24px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-body{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+.search{
+  border-radius: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: larger;
+}
+
+.button-search{
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-weight: bolder;
 }
