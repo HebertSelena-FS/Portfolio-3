@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 
@@ -54,15 +55,26 @@ const Searchartist =  (props) => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {data?.map((item) => (
-            <div key={item.id}>
-            <li >{item.name}</li>
-            {/* <div>{item.image[0].url}</div> */}
-            <img src={item.images[0]?.url} alt="image of item" />
-            </div>
-          ))}
-        </ul>
+        <ul className='album-card-display'>
+  <div className='album-row'>
+    {data?.map((item) => (
+      <div className='album-card-container' key={item.id}>
+        {item.images.length > 0 ? (
+          <Link href={item.external_urls.spotify}>
+            <h3 className='album-title'>{item.name}</h3>
+            <img
+              src={item.images.length > 0 ? item.images[0].url : ''}
+              width="160px"
+              height="160px"
+            />
+          </Link>
+        ) : (
+          ''
+        )}
+      </div>
+    ))}
+  </div>
+</ul>
       )}
       
     </div>
@@ -70,3 +82,5 @@ const Searchartist =  (props) => {
   }
 
     export default Searchartist 
+
+ 
