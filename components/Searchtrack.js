@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/react'
 import { useEffect, useState } from 'react'
-
+import Link from 'next/link'
 
 
 
@@ -55,14 +55,21 @@ const Searchtrack =  (props) => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
-          {data?.map((item) => (
-            <div key={item.id}>
-            <li >{item.name}</li>
-            {/* <img src={item.images[0]?.url} alt="image of item" /> */}
+        <div className='track-card-display'>
+  <div className='track-row'>
+    {data?.map((item) => (
+      <div className='track-card-container' key={item.id}>
+        
+          <Link href={item.external_urls.spotify}>
+            <div className='track-title'>{item.name}</div>
+            <div className='track-artist-name' >
+              Artist:{item.artists[0].name}
             </div>
-          ))}
-        </ul>
+          </Link>
+      </div>
+    ))}
+  </div>
+</div>
       )}
       
     </div>

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 html,
 body {
@@ -26,6 +24,14 @@ a {
   height: 50px;
 }
 
+.logoimage{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 20px;
+  height: auto;
+  width: 10%;
+}
+
 .artist-body{
   font-size: 24px;
   font-weight: bolder;
@@ -37,6 +43,7 @@ a {
 
 .search-body{
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 30px;
   
@@ -58,4 +65,85 @@ a {
   padding-left: 10px;
   margin-left: 10px;
   font-weight: bolder;
+}
+
+.album-card-display{
+    display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.album-card-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: black;
+  max-width: 20%;
+
+}
+
+.album-title{
+  text-align: center;
+  font-size: 10px;
+  /* max-width: 20%; */
+}
+
+.album-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.track-card-display{
+    display: flex;
+  flex-direction: row;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.track-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.track-card-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: black;
+  width: 22%;
+  /* max-width: 20%; */
+
+}
+
+.track-title{
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70px;
+  width: 100%;
+  /* font-size: 20px; */
+}
+
+.track-artist-name{
+  color: aliceblue;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  width: 100%;
 }
