@@ -1,16 +1,23 @@
 import Link from 'next/link'
 import { useSession, signIn, signOut, getSession } from "next-auth/react"
+import logo from '../public/Spotify_Logo_RGB_Green.png'
+import Image from 'next/image'
 
 function Navbar() {
   // const {session, loading} = useSession()
 const { data: session, loading } = useSession()
 // const result = useSession()
 console.log({ session })
+const logow = '100px'
+const logoh = '50px'
   return (
     <div className='header'>
-      {/* <h1 className='logo'>
-        <a href='#'>NextAuth</a>
-      </h1> */}
+      <div> 
+        <Image
+        src={logo}
+        alt="Spotify Logo"
+        className='logoimage'
+        />
       <ul className="container-nav">
         <li className='nav-items' >
           {session ? <Link href='/'> Home </Link> : ""}
@@ -24,7 +31,7 @@ console.log({ session })
         <li className='nav-items' >
           {session ? <Link href='/song'> Song </Link> : ""}
         </li>
-
+      
         {!loading && !session && (
           <li>
             <Link
@@ -52,6 +59,7 @@ console.log({ session })
           </li>
         )}
       </ul>
+      </div>
     </div>
   );
 }

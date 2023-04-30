@@ -26,6 +26,14 @@ a {
   height: 50px;
 }
 
+.logoimage{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 20px;
+  height: auto;
+  width: 10%;
+}
+
 .artist-body{
   font-size: 24px;
   font-weight: bolder;
